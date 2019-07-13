@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = ViewData["Message"];
+}
+
+@*@Html.Partial("_Carousel")*@
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="http://www.awltovhc.com/bp115snrflj4D8885C5467D5D7DD?imgurl=http%3A%2F%2Fgloimg.gearbest.com%2Fgb%2Fpdm-product-pic%2FElectronic%2F2016%2F04%2F13%2Fgoods-img%2F1487077785788069065.jpg" alt="Original Xiaomi Mi Bluetooth 4.0 Speaker" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    &nbsp;Original Xiaomi Mi Bluetooth 4.0 Speaker&nbsp;
+                    <a class="btn btn-default" href="http://www.anrdoezrs.net/kd116y1A719PYTTTQXQPRSYQYSYY?url=http%3A%2F%2Fwww.gearbest.com%2Fspeakers%2Fpp_352950.html%3Fwid%3D21&cjsku=176718902" target="_blank">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="http://www.awltovhc.com/ab107wquiom7GBBB8F879AG8GAGG?imgurl=http%3A%2F%2Fgloimg.gearbest.com%2Fgb%2Fpdm-product-pic%2FElectronic%2F2016%2F10%2F24%2Fgoods-img%2F1487074328783060724.jpg" alt="Q6 WiFi 4K Ultra HD Action Sport Camera" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    &nbsp;Q6 WiFi 4K Ultra HD Action Sport Camera&nbsp;
+                    <a class="btn btn-default" href="http://www.jdoqocy.com/22111vpyvpxCLGGGDKDCEFLDLFLL?url=http%3A%2F%2Fwww.gearbest.com%2Faction-cameras%2Fpp_495502.html%3Fwid%3D21&cjsku=151749606" target="_blank">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="http://www.awltovhc.com/7i117tkocig1A555292134A2A4AA?imgurl=http%3A%2F%2Fgloimg.gearbest.com%2Fgb%2Fpdm-product-pic%2FElectronic%2F2016%2F12%2F12%2Fgoods-img%2F1487959742397085537.jpg" alt="Z83S TV USB Stick Mini PC Intel Atom X5-Z8350 Quad Core" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    &nbsp;Z83S TV USB Stick Mini PC Intel Atom X5-Z8350 Quad Core&nbsp;
+                    <a class="btn btn-default" href="http://www.jdoqocy.com/pf65tenkem1A555292134A2A4AA?url=http%3A%2F%2Fwww.gearbest.com%2Ftv-box-mini-pc%2Fpp_580666.html%3Fwid%3D3&cjsku=203261403" target="_blank">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="http://www.tqlkg.com/r2122elpdjh2B6663A32446BBA34?imgurl=http%3A%2F%2Fimage.dhgate.com%2F600x600%2Ff2%2Falbu%2Fg4%2FM00%2F9E%2FFB%2FrBVaEFemtsWAdPvqAAGyq8DiszA686.jpg" width="300" height="300" alt="High-quality messenger bags" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    &nbsp;High-quality messenger bags&nbsp;
+                    <a class="btn btn-default" href="http://www.kqzyfj.com/kb102zw41w3JSNNNKRKJLLNSSRKL?url=http%3A%2F%2Fwww.dhgate.com%2Fproduct%2Fshoulder-bags-ladies-high-quality-messenger%2F388773462.html&cjsku=388773462" target="_blank">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="row" style="margin:0; width:100%;">
+    @*@Html.Partial("_Categories")*@
+    <div class="col-md-2">
+        <h2>Categories</h2>
+        <ul>
+            @foreach (var c in ViewBag.Catlist)
+            {
+                <li><a asp-controller="Home" asp-action="Products" asp-route-category=@c.Name>@c.Name</a></li>
+            }
+        </ul>
+    </div>
+    @*@Html.Partial("_Building")*@
+    <div class="col-md-10 text-center" style="padding-top:130px;">
+        <img src="~/images/UnderConstruction.png" width="150" height="150" />
+        <p>Under Construction</p>
+    </div>
+</div>

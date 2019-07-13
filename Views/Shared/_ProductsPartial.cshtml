@@ -1,0 +1,23 @@
+﻿<div class="products">
+    <h2>@ViewBag.Category</h2>
+
+    @foreach (var p in ViewBag.Products)
+    {
+        <div class="row productRow">
+            <div class="col-md-6">
+                <a href=@p.Link target="_blank">
+                    <img class="productImage"
+                         src="@p.Source"                         
+                         alt="@p.Name"/>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <p class="productPara">
+                    <span class="productSupplier">@p.Supplier</span><br />
+                    <span class="productName">@p.Name</span><br />
+                    <span class="productDescription">@p.Description</span>
+                </p>
+            </div>
+        </div>
+    }
+</div>

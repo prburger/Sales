@@ -1,0 +1,58 @@
+﻿<div class="row productFrontPageRow1">
+    @for (int i = 0; i < 4; i++)
+    {
+        <div class="col-md-3">
+            <a class="FrontPageImageLink"
+               href="@ViewBag.FrontPage[i].Link"
+               target="_blank">
+                <img class="FrontPageImageRow1"
+                     src="@ViewBag.FrontPage[i].Source"
+                     border="0"
+                     alt="@ViewBag.FrontPage[i].Description" />
+                <h4>@ViewBag.FrontPage[i].Description</h4>
+            </a>
+        </div>
+    }
+</div>
+<div class="row productFrontPageRow2">
+    @for (int i = 4; i < 8; i++)
+    {
+        <div class="col-md-3">
+            <a class="FrontPageImageLink"
+               href="@ViewBag.FrontPage[i].Link"
+               target="_blank">
+                <img class="FrontPageImageRow1"
+                     src="@ViewBag.FrontPage[i].Source"
+                     border="0"
+                     alt="@ViewBag.FrontPage[i].Description" />
+                <h4>@ViewBag.FrontPage[i].Description</h4>
+            </a>
+        </div>
+    }
+</div>
+
+<div class="productFrontPageRow3">
+    @for (int i = 8; i < ViewBag.FrontPage.Count; i += 2)
+{
+    <div class="row">
+        <div class="col-md-6">
+            <a class="FrontPageImageLink"
+               href="@ViewBag.FrontPage[i].Link"
+               target="_blank">
+                <img class="FrontPageWideImage"
+                     src="@ViewBag.FrontPage[i].Source"
+                     alt="@ViewBag.FrontPage[i].Description" />
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="FrontPageImageLink"
+               href="@ViewBag.FrontPage[i+1].Link"
+               target="_blank">
+                <img class="FrontPageWideImage"
+                     src="@ViewBag.FrontPage[i+1].Source"
+                     alt="@ViewBag.FrontPage[i+1].Description" />
+            </a>
+        </div>
+    </div>
+}
+</div>

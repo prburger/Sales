@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/media-query.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+        <link rel="stylesheet" href="~/css/site.min.css" />
+        <link rel="stylesheet" href="~/css/media-query.min.css" />
+    </environment>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82599805-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-82599805-1');
+    </script>
+
+
+</head>
+<body>
+    <header>
+        <partial name="_CookieConsentPartial" />
+        <nav class="navbar navbar-expand-xl">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img class="logo" src="~/images/index/logo.png" />
+                </a>
+                <button class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#SDnavbar"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Menu">
+                    Menu
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="SDnavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Affiliate">Affiliate Marketing</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="carousel-fade" data-ride="carousel" data-interval="6000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="~/images/carousel/blue tooth speaker.jpg"
+                             alt="Original Xiaomi Mi Bluetooth 4.0 Speaker"
+                             class="img-responsive" />
+                        <div class="carousel-caption">
+                            <a class="btn btn-default"
+                               href="http://www.anrdoezrs.net/kd116y1A719PYTTTQXQPRSYQYSYY?url=http%3A%2F%2Fwww.gearbest.com%2Fspeakers%2Fpp_352950.html%3Fwid%3D21&cjsku=176718902"
+                               target="_blank">
+                                <p>Original Xiaomi Mi Bluetooth 4.0 Speaker - Buy now</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/carousel/action sports camera.jpg"
+                             alt="Q6 WiFi 4K Ultra HD Action Sport Camera"
+                             class="img-responsive" />
+                        <div class="carousel-caption">
+                            <a class="btn btn-default carouselLink"
+                               href="http://www.jdoqocy.com/22111vpyvpxCLGGGDKDCEFLDLFLL?url=http%3A%2F%2Fwww.gearbest.com%2Faction-cameras%2Fpp_495502.html%3Fwid%3D21&cjsku=151749606"
+                               target="_blank">
+                                <p>Q6 WiFi 4K Ultra HD Action Sport Camera - Buy now</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/carousel/brother printer.jpeg"
+                             alt="Brother DCP-L2540DW All-in-One Wireless Laser Printer"
+                             class="img-responsive" />
+                        <div class="carousel-caption" role="option">
+                            <a class="btn btn-default carouselLink"
+                               href="http://www.tkqlhce.com/click-8333070-12386741"
+                               target="_blank">
+                                <p>Brother DCP-L2540DW All-in-One Wireless Laser Printer - Buy now</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/carousel/antenna.jpg"
+                             alt="Indoor and Outdoor HDTV Antennas"
+                             class="img-responsive" />
+                        <div class="carousel-caption">
+                            <a class="btn btn-default carouselLink"
+                               href="http://www.jdoqocy.com/click-8333070-12383477"
+                               target="_blank">
+                                <p>Indoor and Outdoor HDTV Antennas - Buy now</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; @DateTime.Now.Year Paul Burger <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <environment include="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- Quantcast Tag -->
+    <script type="text/javascript">
+        var _qevents = _qevents || [];
+
+        (function () {
+            var elem = document.createElement('script');
+            elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+            elem.async = true;
+            elem.type = "text/javascript";
+            var scpt = document.getElementsByTagName('script')[0];
+            scpt.parentNode.insertBefore(elem, scpt);
+        })();
+
+        _qevents.push({
+            qacct: "p-FrbDQU_3Zp7nX"
+        });
+    </script>
+    <noscript>
+        <div style="display:none;">
+            <img src="//pixel.quantserve.com/pixel/p-FrbDQU_3Zp7nX.gif" border="0" height="1" width="1" alt="Quantcast" />
+        </div>
+    </noscript>
+    <!-- End Quantcast tag -->
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

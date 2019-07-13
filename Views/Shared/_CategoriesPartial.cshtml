@@ -1,0 +1,16 @@
+﻿<div class="category">
+    <h2 class="categoryHeading">Categories</h2>
+    <ul>
+        @foreach (var c in ViewBag.Catlist)
+    {
+        if (c.Count > 0)
+        {
+        <li>
+            <a asp-controller="Home"
+               asp-action="Products"
+               asp-route-category=@c.Name>@c.Name</a>
+        </li>
+        }
+    }
+    </ul>
+</div>
